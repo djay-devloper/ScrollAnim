@@ -27,22 +27,13 @@ The production-ready files are generated in `dist/`.
 
 ## Deploy to GitHub Pages
 
-Install the deployment package:
+Deploy the production build to the `gh-pages` branch:
 
 ```bash
-npm install --save-dev gh-pages
+npm run deploy
 ```
 
-Build with your repository name as the base path, then publish the `dist/` directory:
-
-```bash
-npm run build -- --base=/YOUR_REPO_NAME/
-npx gh-pages -d dist
-```
-
-Replace `YOUR_REPO_NAME` with the GitHub repository name. In the repository's **Settings → Pages**, select the `gh-pages` branch as the deployment source.
-
-For a project site hosted at `https://USERNAME.github.io/YOUR_REPO_NAME/`, set the Vite `base` option in `vite.config.js` to `"/YOUR_REPO_NAME/"` before building, so asset URLs use the correct path.
+The Vite base path is configured for this repository (`/ScrollAnim/`). In the repository's **Settings → Pages**, select the `gh-pages` branch and `/ (root)` as the deployment source. The published site will be available at `https://djay-devloper.github.io/ScrollAnim/`.
 
 ## Animation overview
 
